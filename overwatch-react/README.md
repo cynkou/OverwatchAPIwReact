@@ -1,16 +1,101 @@
-# React + Vite
+# Overwatch 2 Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React-based Overwatch 2 dashboard that uses TeKrop's OverFast API to retrieve hero information and player statistics.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Hero Directory:** Displays Overwatch 2 heroes with their portraits and roles.
+- **Hero Filtering:** Filter heroes by All Heroes, Tank, Damage, or Support.
+- **Player Search:** Search for Overwatch 2 players by username or BattleTag.
+- **Player Profiles:** View a player's profile information after selecting a search result.
+- **Player Statistics:** Displays general statistics, including win rate, games played, average eliminations, and average deaths.
+- **Responsive Design:** Dark-themed interface with purple accents and responsive layouts.
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- JavaScript
+- Vite
+- CSS
+- TeKrop's OverFast API
 
-## Expanding the Oxlint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Follow these instructions to run the project locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/cynkou/OverwatchAPIwReact.git
+```
+
+### 2. Navigate to the project folder
+
+```bash
+cd OverwatchAPIwReact
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+Open the localhost URL displayed in your terminal to access the application.
+
+## How to Use
+
+### Player Search
+
+1. Locate the Player Lookup section.
+2. Enter an Overwatch 2 player's username or full BattleTag.
+3. Click the **Search Player** button.
+4. If searching by username, select the correct player from the search results.
+5. Click **View Profile** to load the player's profile and statistics.
+
+### Hero Directory
+
+1. Scroll to the Overwatch Heroes section.
+2. Use the filter buttons to select a category:
+   - **All Heroes:** Displays every available hero.
+   - **Tank:** Displays Tank heroes.
+   - **Damage:** Displays Damage heroes.
+   - **Support:** Displays Support heroes.
+3. Select another filter at any time to change the displayed heroes.
+
+## API Information
+
+This project uses [TeKrop's OverFast API](https://overfast-api.tekrop.fr/) to retrieve Overwatch 2 hero information, player profiles, and player statistics.
+
+The application retrieves data dynamically through API requests.
+
+## Project Structure
+
+```text
+overwatch-react/
+├── src/
+│   ├── components/
+│   │   ├── HeroCard.jsx
+│   │   ├── HeroList.jsx
+│   │   ├── PlayerProfile.jsx
+│   │   └── SearchBar.jsx
+│   ├── services/
+│   │   └── overwatchAPI.js
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+├── index.html
+├── package.json
+├── package-lock.json
+└── vite.config.js
+```
+
+## Author
+
+Developed as a React API project using Vite and TeKrop's OverFast API.
